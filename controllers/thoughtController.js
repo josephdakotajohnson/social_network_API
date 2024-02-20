@@ -115,7 +115,7 @@ module.exports = {
         }
     },
 
-    async removeReaction(req, res) {
+    async addReaction(req, res) {
         try {
             // console.log("You are currently adding a reaction");
             console.log(req.body);

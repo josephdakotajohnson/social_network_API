@@ -125,7 +125,12 @@ module.exports = {
                 { runValidators: true, new: true }
             );
 
-            if (!friend);
+            if (!friend) {
+                return res
+                    .status(404)
+                        .json({ message: "No user has been found with that ID. :(" });
+            }
+            res.json(friend);
         } catch (err) {
             res.status(500).json(err);
         }
